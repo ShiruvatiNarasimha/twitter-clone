@@ -11,7 +11,7 @@ interface imgUploadProps {
 
 const ImageUpload: React.FC<imgUploadProps> = ({ disabled, label, value, onChange }) => {
     const [base64, setBase64] = useState("");
-    const handleChange = useCallback((base64: string)=>{
+    const handleChange = useCallback((base64: string)=> {
         onChange(base64);
     },[onChange]);
     const handleDrop = useCallback((files: any) => {
@@ -38,7 +38,7 @@ const ImageUpload: React.FC<imgUploadProps> = ({ disabled, label, value, onChang
             {base64 ? (
                 <Image src={base64} alt="Uploaded Image" height="100" width="100"/>
             ) : (
-                <p className="text-white">{label}</p>
+                <p className="text-white">{ label }</p>
             )}
         </div>
     );
