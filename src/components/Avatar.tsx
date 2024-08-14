@@ -1,6 +1,5 @@
 import React, {useCallback} from 'react';
 import useUser from "@/hooks/useUser";
-import Image from "next/image";
 import {useRouter} from "next/router";
 
 interface avatarProps {
@@ -25,16 +24,7 @@ const Avatar : React.FC<avatarProps> = ({ userId, isLarge, hasBorder }) => {
             ${isLarge ? `h-32` : `h-12`}
             ${hasBorder ? `border-4 border-black` : ``}
         `}>
-            <Image
-                src={data?.profileImage || '/images/placeholder.png'}
-                alt="Avatar"
-                fill
-                onClick={onClick}
-                style={{
-                    objectFit: "cover",
-                    borderRadius: "100%"
-                }}
-            />
+            
         </div>
     );
 };
