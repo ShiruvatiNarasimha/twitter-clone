@@ -5,6 +5,7 @@ export const loginModalAtom = atom({
     default: {
         isOpen: false,
     },
+    
 });
 
 export const registerModalAtom = atom({
@@ -13,6 +14,8 @@ export const registerModalAtom = atom({
         isOpen: false,
     },
 });
+
+
 
 export const editModalAtom = atom({
     key: "editModalAtom",
