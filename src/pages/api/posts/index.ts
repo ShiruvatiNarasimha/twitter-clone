@@ -37,16 +37,7 @@ export default async function handler(
                         createdAt: "desc"
                     }
                 });
-            } else {
-                posts = await prisma.post.findMany({
-                    include: {
-                        user: true,
-                        comments: true
-                    },
-                    orderBy: {
-                        createdAt: "desc"
-                    }
-                });
+            
             }
             return res.status(200).json(posts);
         }
